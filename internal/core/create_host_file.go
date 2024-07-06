@@ -12,7 +12,13 @@ func CreateHostFile(str string, filePath string) (err error) {
 	for _, v := range domains {
 		go GetWebsiteHost(v, ch)
 	}
-	fmt.Println("================\nstart get host：\n================")
+	fmt.Println("================")
+	fmt.Println("start get host：")
+	for index, domain := range domains {
+		fmt.Println(index, ": ", domain)
+	}
+	fmt.Println("================")
+
 	hostMap := make(map[string]string)
 	for range domains {
 		chRec := <-ch
@@ -40,6 +46,6 @@ func CreateHostFile(str string, filePath string) (err error) {
 	writer := bufio.NewWriter(out)
 	_, _ = writer.WriteString(str)
 	_ = writer.Flush()
-	fmt.Println("================\ndone\n================")
+	fmt.Println("================")
 	return
 }

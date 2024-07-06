@@ -1,4 +1,4 @@
-module github.com/RealBeBetter/website_host
+module github.com/RealBeBetter/website-hosts
 
 go 1.22.3
 

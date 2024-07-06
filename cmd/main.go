@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-import "github.com/RealBeBetter/website_host/internal/core"
+import "github.com/RealBeBetter/website-hosts/internal/core"
 
 func main() {
 	fmt.Println("1. Create the host file to current directory (default)")
